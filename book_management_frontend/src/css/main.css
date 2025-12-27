@@ -1,0 +1,40 @@
+/* --- src/css/main.css  --- */
+
+/* 1. 全局背景图：贴在 body 上，所有页面通用 */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://wx1.sinaimg.cn/large/006N9rP0ly1i6lkg4345oj31402epn95.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 固定背景，滚动时更高级 */
+  min-height: 100vh;
+}
+
+/* 强制让 Element Plus 的所有布局容器变透明 */
+
+.el-container,
+.el-header,
+.el-aside,
+.el-main {
+  background-color: transparent !important; /* !important 优先级最高 */
+  height: 100%; /* 确保高度撑满，防止半截 */
+}
+
+/* 3. 表格美化 */
+.el-table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --el-table-bg-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 4. 其他杂项 */
+#checkTheme {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.el-dialog {
+  border-radius: 20px;
+}

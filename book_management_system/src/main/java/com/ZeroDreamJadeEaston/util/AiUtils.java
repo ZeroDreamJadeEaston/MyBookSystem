@@ -9,8 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class AiUtils {
 
-    // Key
-    private static final String API_KEY = "sk-kpbtvuyxdjqcozltaeubcwjcxouhutrfstetamkfalfqobje";
+    // Key (已脱敏，上传 GitHub 前请使用此版本)
+    // 注意：本地运行项目时，请将 "YOUR_API_KEY_HERE" 替换回您真实的 sk- 开头的密钥！
+    private static final String API_KEY = "YOUR_API_KEY_HERE";
 
     // 硅基流动 API 地址
     private static final String API_URL = "https://api.siliconflow.cn/v1/chat/completions";

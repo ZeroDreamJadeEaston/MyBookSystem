@@ -45,22 +45,23 @@
 > [!NOTE]
 > 本项目采用 Monorepo 结构，前后端代码存放于同一仓库中。
 
+## 📂 目录结构
+
 ```text
 MyBookSystem/
-├── src/main/java/          # ☕ 后端 Java 源代码
-│   ├── controller/         # 控制层 (BookController, AdminController...)
-│   ├── service/            # 业务层 (借阅逻辑, AI 调用...)
-│   ├── mapper/             # 持久层接口
-│   ├── domain/             # 实体类 (Entity, VO, DTO)
-│   ├── interceptor/        # 拦截器 (JwtTokenInterceptor)
-│   └── util/               # 工具类 (JwtUtils, MyUtils)
-├── src/main/resources/     # ⚙️ 后端配置文件 & Mapper XML
-├── book_management_frontend/ # 🎨 前端 Vue 项目源码
-├── pom.xml                 # 📦 Maven 依赖管理
-└── sql/                    # 🗄️ 数据库 SQL 脚本
+├── src/main/java/
+│   ├── controller/
+│   ├── service/
+│   ├── mapper/
+│   ├── domain/
+│   ├── interceptor/
+│   └── util/
+├── src/main/resources/
+├── book_management_frontend/
+├── pom.xml
+└── sql/
 ✨ 核心功能
 👨‍🎓 读者端
-
 ✅ 图书检索：支持书名 / 作者 / ISBN 模糊查询，关键词高亮
 
 ✅ 借阅申请：实时库存校验，事务控制防止超借
@@ -70,7 +71,6 @@ MyBookSystem/
 ✅ 智能推荐：展示管理员发布的精选图书
 
 👨‍💼 管理员端
-
 ✅ 图书管理：完整 CRUD，支持 AI 一键辅助录入
 
 ✅ 借阅监管：查看全馆借阅情况，处理归还与逾期
@@ -81,7 +81,6 @@ MyBookSystem/
 
 🚀 快速开始
 1️⃣ 环境要求
-
 JDK 17+
 
 Node.js 16+（推荐 18.x）
@@ -91,6 +90,6 @@ MySQL 8.0+
 Redis（默认端口 6379）
 
 2️⃣ 数据库初始化
-
-创建数据库：
+sql
+复制代码
 CREATE DATABASE book_db;

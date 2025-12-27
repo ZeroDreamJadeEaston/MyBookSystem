@@ -99,3 +99,30 @@ spring:
     redis:
       host: localhost
       port: 6379
+```
+
+### 3. 启动后端
+1. 使用 IDEA 打开项目根目录。
+2. 等待 Maven 依赖下载完成。
+3. 运行 `Application.java`。
+4. 服务默认运行在 `http://localhost:8080`。
+
+### 4. 启动前端
+打开终端，进入前端目录：
+
+```bash
+# 1. 进入前端目录
+cd book_management_frontend
+
+# 2. 安装依赖
+npm install
+
+# 3. 启动开发服务器
+npm run dev
+```
+访问地址：http://localhost:5173
+
+⚠️ 注意事项 (Notes)
+[!IMPORTANT] 关于 Redis 项目强依赖 Redis 进行 Token 校验与数据缓存。启动项目前请务必开启 Redis 服务，否则登录功能将报错 RedisConnectionFailure。
+
+[!WARNING] 关于 AI 接口 AI 辅助录入功能依赖 DeepSeek API，请确保网络通畅，并在配置文件中检查 API Key 是否有效。

@@ -58,39 +58,46 @@ MyBookSystem/
 ├── book_management_frontend/ # 🎨 前端 Vue 项目源码
 ├── pom.xml                 # 📦 Maven 依赖管理
 └── sql/                    # 🗄️ 数据库 SQL 脚本
+✨ 核心功能 (Features)
+👨‍🎓 读者端 (Reader)
+[x] 图书检索：支持按书名、作者、ISBN 模糊搜索，关键词高亮显示。
 
+[x] 借阅申请：实时库存检测，事务控制防止超卖。
 
-## ✨ 核心功能 (Features)
+[x] 个人中心：查看当前借阅状态、历史归还记录。
 
-### 👨‍🎓 读者端 (Reader)
-- [x] **图书检索**：支持按书名、作者、ISBN 模糊搜索，关键词高亮显示。
-- [x] **借阅申请**：实时库存检测，事务控制防止超卖。
-- [x] **个人中心**：查看当前借阅状态、历史归还记录。
-- [x] **智能推荐**：查看管理员发布的精选图书推荐。
+[x] 智能推荐：查看管理员发布的精选图书推荐。
 
-### 👨‍💼 管理员端 (Admin)
-- [x] **图书管理**：CRUD 操作，支持 **✨ AI 一键辅助录入**。
-- [x] **借阅监管**：查看全馆借阅数据，处理还书与逾期。
-- [x] **用户管理**：管理读者账号，包含强制注销逻辑（需无未还书籍）。
-- [x] **安全机制**：注册邀请码校验，Token 双重认证。
+👨‍💼 管理员端 (Admin)
+[x] 图书管理：CRUD 操作，支持 ✨ AI 一键辅助录入。
 
----
+[x] 借阅监管：查看全馆借阅数据，处理还书与逾期。
 
-## 🚀 快速开始 (Getting Started)
+[x] 用户管理：管理读者账号，包含强制注销逻辑（需无未还书籍）。
 
-### 1. 环境准备
+[x] 安全机制：注册邀请码校验，Token 双重认证。
+
+🚀 快速开始 (Getting Started)
+1. 环境准备
 确保本地已安装：
-- **JDK**: 17+
-- **Node.js**: 16+ (推荐 18.x)
-- **MySQL**: 8.0+
-- **Redis**: 必须启动服务（默认端口 6379）
 
-### 2. 数据库配置
-1. 创建数据库 `book_db`。
-2. 运行项目根目录下的 SQL 脚本，初始化表结构与数据。
-3. 修改 `src/main/resources/application.yml`：
+JDK: 17+
 
-```yaml
+Node.js: 16+ (推荐 18.x)
+
+MySQL: 8.0+
+
+Redis: 必须启动服务（默认端口 6379）
+
+2. 数据库配置
+创建数据库 book_db。
+
+运行项目根目录下的 SQL 脚本，初始化表结构与数据。
+
+修改 src/main/resources/application.yml：
+
+YAML
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/book_db?serverTimezone=Asia/Shanghai
@@ -100,7 +107,6 @@ spring:
     redis:
       host: localhost
       port: 6379
-
 3. 启动后端
 使用 IDEA 打开项目根目录。
 

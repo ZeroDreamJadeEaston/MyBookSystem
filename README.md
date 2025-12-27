@@ -122,7 +122,13 @@ npm run dev
 ```
 访问地址：http://localhost:5173
 
-⚠️ 注意事项 (Notes)
-[!IMPORTANT] 关于 Redis 项目强依赖 Redis 进行 Token 校验与数据缓存。启动项目前请务必开启 Redis 服务，否则登录功能将报错 RedisConnectionFailure。
 
-[!WARNING] 关于 AI 接口 AI 辅助录入功能依赖 DeepSeek API，请确保网络通畅，并在配置文件中检查 API Key 是否有效。
+## ⚠️ 注意事项 (Notes)
+
+> [!IMPORTANT]
+> **关于 Redis**
+> 项目强依赖 Redis 进行 Token 校验与数据缓存。**启动项目前请务必开启 Redis 服务**，否则登录功能将报错 `RedisConnectionFailure`。
+
+> [!WARNING]
+> **关于 AI 接口**
+> AI 辅助录入功能依赖 DeepSeek API，请确保网络通畅，并在配置文件中检查 API Key 是否有效。
